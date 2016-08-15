@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('posts/{post}', function (App\Post $post) {
+    return view('posts.index')->withPost($post);
 });
