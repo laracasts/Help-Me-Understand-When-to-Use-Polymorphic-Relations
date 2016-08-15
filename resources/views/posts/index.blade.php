@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body class="container">
     <article>
-        <h2>{{ $post->title }}</h2>
+        <header>
+            <h2>{{ $post->title }}</h2>
+
+            <form method="POST" action="/posts/{{ $post->id }}/favorites">
+                {{ csrf_field() }}
+
+                <button type="submit" class="btn btn-link btn-not-favorited">
+                    <i class="glyphicon glyphicon-heart"></i>
+                </button>
+            </form>
+        </header>
+
+        <hr>
 
         <div class="body">
             {{ $post->body }}
         </div>
     </article>
-
-    <hr>
 
     <h3>Comments</h3>
 

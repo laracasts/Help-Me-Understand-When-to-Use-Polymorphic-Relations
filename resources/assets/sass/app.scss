@@ -1,2 +1,14 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-not-favorited {
+    color: #e3e3e3;
+}
+
+.btn-favorited {
+    color: red;
+}
 

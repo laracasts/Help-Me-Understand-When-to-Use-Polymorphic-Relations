@@ -1,0 +1,15 @@
+header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.btn-not-favorited {
+  color: #e3e3e3; }
+
+.btn-favorited {
+  color: red; }
+
+/*# sourceMappingURL=app.css.map */
