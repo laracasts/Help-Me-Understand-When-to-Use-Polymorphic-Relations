@@ -1,5 +1,7 @@
 <?php
 
+Auth::loginUsingId(1);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +14,7 @@
 */
 
 Route::get('posts/{post}', function (App\Post $post) {
-    return view('posts.index')->withPost($post);
+    return view('posts.show')->withPost($post);
 });
+
+// Laracasts Homework: Set up routing to add and remove a favorite.

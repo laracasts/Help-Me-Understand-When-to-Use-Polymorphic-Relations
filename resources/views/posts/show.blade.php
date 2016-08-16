@@ -12,13 +12,14 @@
         <header>
             <h2>{{ $post->title }}</h2>
 
-            <form method="POST" action="/posts/{{ $post->id }}/favorites">
+            <form method="POST" action="/posts/{{ $post->id }}/favorite">
                 {{ csrf_field() }}
 
-                <button type="submit" class="btn btn-link btn-not-favorited">
+                <button class="btn-link {{ $post->isFavoritedBy(Auth::user()) ? 'btn-favorited' : 'btn-not-favorited' }}">
                     <i class="glyphicon glyphicon-heart"></i>
                 </button>
             </form>
+
         </header>
 
         <hr>
@@ -33,6 +34,10 @@
     <ul>
         @foreach ($post->comments as $comment)
             <li class="comment">
+                <button class="btn-link {{ $comment->isFavoritedBy(Auth::user()) ? 'btn-favorited' : 'btn-not-favorited' }}">
+                    <i class="glyphicon glyphicon-heart"></i>
+                </button>
+
                 {{ $comment->body }}
             </li>
         @endforeach

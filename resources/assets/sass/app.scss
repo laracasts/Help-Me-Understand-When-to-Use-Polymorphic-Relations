@@ -6,9 +6,17 @@ header {
 
 .btn-not-favorited {
     color: #e3e3e3;
+
+    &:hover {
+        color: red;
+    }
 }
 
 .btn-favorited {
     color: red;
+
+    &:hover {
+        color: #e3e3e3;
+    }
 }
 

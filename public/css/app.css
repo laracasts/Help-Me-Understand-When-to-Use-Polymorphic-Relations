@@ -8,8 +8,12 @@ header {
 
 .btn-not-favorited {
   color: #e3e3e3; }
+  .btn-not-favorited:hover {
+    color: red; }
 
 .btn-favorited {
   color: red; }
+  .btn-favorited:hover {
+    color: #e3e3e3; }
 
 /*# sourceMappingURL=app.css.map */
