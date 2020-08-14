@@ -16,7 +16,7 @@ class CreateFavoritesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->index();
             $table->integer('favoritable_id');
-            $table->integer('favoritable_type');
+            $table->string('favoritable_type');
             $table->timestamps();
 
             $table->unique(['user_id', 'favoritable_id', 'favoritable_type']);
